@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+  <style>
+       #logo{
+         text-align: center;
+         margin-top:10%;
+       }
+       .container-fluid {
+           padding:30px;
+       }
+
+       .paypal-form {
+           max-width:460px;
+           margin-left:auto;
+           margin-right:auto;
+           padding:60px 20px;
+           font-size:13px;
+       }
+       .paypal-form .content {
+           margin: 0 15%;
+           padding: 0 0 10px;
+           border-bottom:1px solid gray;
+       }
+
+       .paypal-form .buttonlogin {
+           width: 344px;
+           height: 44px;
+           padding: 0;
+           border: 0;
+           display: block;
+           background-color: #34597C;
+           color: white;
+           border-radius:2px;
+           cursor:pointer;
+           transition: background-color .4s ease-out;
+       }
+       .paypal-form .actionbutton {
+           margin-top:10%;
+       }
+       .paypal-form .element {
+           height: 40px;
+           width: 100%;
+           padding:0 10px;
+           margin-bottom:10px;
+           border: 1px solid #9da3a6;
+           background: #fff;
+           border-radius: 5px;
+       }
+       .grid{
+         display:grid;
+         width: 240px;
+         grid-template-columns: 1fr 80px 1fr;
+         text-align: center;
+         font-size: 10px;
+         margin: 15px auto 0 auto;
+         padding: 0;
+       }
+
+       #div1, #div2, #div3 {
+         width: 80px;
+       }
+
+       #div1{
+         border-right:1px solid;
+       }
+       #div3{
+         border-left:1px solid;
+       }
+       footer{
+      text-align: center;
+      font-size: 10px;
+      font-weight: lighter;
+      color: darkgrey;
+    }
+    footer p{
+      margin-top:0;
+    }
+  </style>
+
+  <div id="logo">
+    <a href="../index.html"><img src="../src/logo.png" width="235" id="mainLogo"></a>
+  </div>
+
+  <div class="container-fluid">
+    <!-- <form method="post" action="/process/Login"> -->
+      <form class="paypal-form" method="post" action="/process/Login">
+
+          <div class="content">
+                  <input id="id" name="id" type="text"  autocomplete="off" placeholder="아이디" class="element">
+                   <input id="id" name="id" type="password"  autocomplete="off" placeholder="비밀번호" class="element">
+                  <button class="buttonlogin actionbutton" type="submit" value="submit" name="">로그인</button>
+                  <p><input type="checkbox" id="al"> 로그인 상태 유지</p>
+          </div>
+          <div class="grid">
+              <div id="div1">아이디 찾기</div><div id="div2">개인키 찾기</div><div id="div3">회원가입</div>
+          </div>
+      </form>
+   </div>
+   <footer>
+      <div>
+        <a>이용약관</a>
+        <a class="menuline">|</a>
+        <a>개인정보처리방침</a>
+        <a class="menuline">|</a>
+        <a>고객센터</a>
+      </div>
+      <p>Copyright AUCTIONLY. All Rights Reserved</p>
+    </footer>
+
+
+
+
+
+</body>
+</html>
