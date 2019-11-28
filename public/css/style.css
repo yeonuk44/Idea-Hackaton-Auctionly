@@ -159,6 +159,12 @@ li>span {
   margin-bottom: 16px;
 }
   /****** ******/
+  /****** HOT Results ******/
+#resultmenu {
+  width: 220px;
+  height: 180px;
+  border: solid gainsboro 1px;
+}
 
 /****** center ******/
 #centerdiv {
@@ -190,6 +196,11 @@ li>span {
 .oneproduct {
   width: 150px;
   margin: 0 7px 14px 7px;
+}
+
+.oneproduct_hot {
+  width: 150px;
+  margin: 0 7px 50px 7px;
 }
 
 .productname {

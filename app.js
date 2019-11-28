@@ -64,60 +64,6 @@ var router = express.Router();
 
 
 //http://localhost:3000/process/product 이 주소로 치면 라우터를 통해 바로 여기로 올 수 있다
-// router.route('/process/product').get(
-//     function (req, res)
-//     {
-//         console.log('/process/product  라우팅 함수 실행');
-//
-//         //세션정보는 req.session 에 들어 있다
-//         if (req.session.user)       //세션에 유저가 있다면
-//         {
-//             res.redirect('/product.html');
-//         }
-//         else
-//         {
-//             res.redirect('/login2.html');
-//
-//         }
-//     }
-// );
-//
-// router.route('/process/login').post(                      //설정된 쿠키정보를 본다
-//     function (req, res) {
-//         console.log('/process/login 라우팅 함수호출 됨');
-//
-//         var paramID = req.body.id || req.query.id;
-//         var pw = req.body.passwords || req.query.passwords;
-//
-//
-//         if (req.session.user) {
-//             console.log('이미 로그인 되어 있음');
-//
-//             res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
-//             res.write('<h1>already Login</h1>');
-//             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
-//             res.write('<a href="/process/product">Move</a>');
-//
-//             res.end();
-//
-//         } else {
-//             req.session.user =
-//                 {
-//                     id: paramID,
-//                     pw: pw,
-//                     name: 'UsersNames!!!!!',
-//                     authorized: true
-//                 };
-//             // res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
-//             res.write('<h1>Login Success</h1>');
-//             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
-//             res.write('<a href="/process/product">Move</a>');
-//
-//             res.end();
-//         }
-//     }
-// );
-
 router.route('/process/community').get(
     function (req, res)
     {
@@ -151,6 +97,7 @@ router.route('/process/login').post(                      //설정된 쿠키정�
             res.write('<h1>already Login</h1>');
             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
             res.write('<a href="/process/community">Move</a>');
+            res.write('<a href="/process/logout">\tlogout</a>');
 
             res.end();
 
@@ -166,6 +113,7 @@ router.route('/process/login').post(                      //설정된 쿠키정�
             res.write('<h1>Login Success</h1>');
             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
             res.write('<a href="/process/community">Move</a>');
+            res.write('<a href="/process/Logout">\tlogout</a>');
 
             res.end();
         }
