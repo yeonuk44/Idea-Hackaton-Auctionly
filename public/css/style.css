@@ -1,0 +1,327 @@
+/****** body ******/
+body {
+  width: 1080px;
+  margin: auto;
+  font-family: Arial;
+}
+
+/****** top nav ******/
+nav {
+  font-size: 12px;
+  margin: 20px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menuline {
+  color: #999999;
+  padding: 0 15px;
+}
+
+.right {
+  float: right;
+}
+
+/****** logo and search ******/
+#logoAndSearch {
+  height: 40px;
+  margin: 15px 0;
+  display: flex;
+}
+
+#mainLogo {
+  margin-top:4px;
+  object-fit: contain;
+}
+
+#searchBar {
+  width: 540px;
+  height: 30px;
+  margin-left: 12px;
+  display: flex;
+}
+
+#search {
+  width: 480px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 8px;
+  border: solid #34597C 3px;
+}
+
+#searchbut {
+  border: solid #34597C 3px;
+  border-left: none;
+}
+
+/****** main navigation ******/
+#secNav {
+  height: 16px;
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+.leftpad {
+  padding-left: 35px;
+}
+
+#silgum {
+  float: right;
+  margin-right: 24px
+}
+
+/****** main page ******/
+#mainwhole {
+  height: 1080px;
+  display: flex;
+}
+  /****** Community ******/
+#communitywhole {
+  height: 1080px;
+  display: flex;
+}
+
+/****** side ******/
+#side {
+  width: 220px;
+  height: inherit;
+  padding: 0 5px;
+  float: left;
+}
+
+#loginbut {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#loginnav {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+.imgonly {
+  margin-bottom: 30px;
+}
+
+.leftnav {
+  margin: 0;
+  font-size: 14px;
+  float: left;
+}
+
+.rightnav {
+  float: right;
+  font-size: 12px;
+}
+
+ul {
+  font-size: 12px;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+li>span {
+  padding-left: 5px;
+}
+
+
+  /****** Community CSS ******/
+#communitymenu {
+  width: 220px;
+  height: 220px;
+  border: solid gainsboro 1px;
+}
+
+.menu-title {
+  width:inherit;
+  height: 45px;
+  background-color: #34597C;
+  color: white;
+}
+
+.title-name {
+  padding: 14.5px 0 0 12px;
+  margin: 0;
+}
+
+.com-sub-menu {
+  display: block;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-bottom: 16px;
+}
+  /****** ******/
+  /****** HOT Results ******/
+#resultmenu {
+  width: 220px;
+  height: 180px;
+  border: solid gainsboro 1px;
+}
+
+/****** center ******/
+#centerdiv {
+  width: 820px;
+  height: inherit;
+  margin-left: 20px;
+}
+
+#hotauction {
+  width: 820px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#hottitle {
+  padding: 0 7px;
+}
+
+#hotproducts {
+  width: 820px;
+  height: 400px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.oneproduct {
+  width: 150px;
+  margin: 0 7px 14px 7px;
+}
+
+.oneproduct_hot {
+  width: 150px;
+  margin: 0 7px 50px 7px;
+}
+
+.productname {
+  font-size: 13px;
+  margin: 7px 0;
+}
+
+.price {
+  font-size: 11px;
+  margin: 0;
+}
+
+.gam, .jeo, .nak {
+  float: left;
+  color: white;
+}
+
+.gam {
+  background-color: black;
+}
+
+.jeo {
+  background-color: royalblue;
+}
+
+.nak {
+  background-color: darkred;
+}
+
+.gamprice, .jeoprice, .nakprice{
+  float: right;
+}
+
+.gamprice {
+  color: black;
+}
+
+.jeoprice {
+  color: royalblue;
+}
+
+.nakprice {
+  color: darkred;
+}
+
+  /****** Community Center ******/
+#com-search {
+  width: inherit;
+  height: 45px;
+  background-color: #34597C;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#mini-search-but {
+  margin: auto 40px auto 0;
+}
+
+#mini-search-input {
+  width: 160px;
+  height: 18px;
+  font-size: 14px;
+  margin: auto 0 auto 0;
+  padding-left: 8px;
+}
+
+.select {
+  display: block;
+  font-size: 12px;
+  margin: auto 16px auto 0;
+  color: white;
+}
+
+.radio-but {
+  margin: auto 8px auto 0;
+}
+
+#q-head {
+  height: 30px;
+  vertical-align: middle;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.q-num, .q-title, .q-auth, .q-date, .q-view {
+  border-bottom: darkgray solid 1px;
+  padding: 10px 10px;
+}
+
+.q-num, .q-auth, .q-date, .q-view {
+  text-align: center;
+}
+
+.q-num {
+  width: 15%;
+}
+
+.q-title {
+  width: 55%;
+  padding-left: 40px;
+}
+
+td>span {
+  padding-left: 5px;
+}
+
+.q-auth {
+  width: 11%;
+}
+
+.q-date {
+  width: 11%;
+}
+
+.q-view {
+  width: 8%;
+}
+
+/****** footer ******/
+footer{
+  color: darkgrey;
+  font-size: 11px;
+  margin-bottom: 20px;
+}

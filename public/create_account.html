@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>회원가입</title>
+</head>
+
+<body>
+  <style>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #logo{
+      text-align: center;
+      margin-top:10%;
+    }
+    .container-fluid {
+      padding-left:30px;
+      padding-right:30px;
+    }
+    .paypal-form {
+      max-width:460px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:60px 20px;
+      font-size:11px;
+    }
+    .paypal-form .content {
+      margin: 0 15%;
+      padding: 0 0 10px;
+    }
+    .paypal-form .buttonlogin {
+      width: 344px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      display: block;
+      background-color: #34597C;
+      color: white;
+      border-radius:2px;
+      cursor:pointer;
+      transition: background-color .4s ease-out;
+    }
+    .paypal-form .actionbutton {
+      margin-top:10%;
+    }
+    .paypal-form .element {
+      height: 30px;
+      width: 100%;
+      padding:0 10px;
+      margin-bottom:10px;
+      border: 1px solid #9da3a6;
+      background: #fff;
+      border-radius: 2px;
+    }
+    #profile{
+      display:none;
+    }
+    .paypal-form .label_profile {
+      height: 130px;
+      width: 100%;
+      display: inline-block;
+      text-align: right;
+      line-height: 230px;
+      font-weight:lighter;
+      padding:0 10px;
+      margin-bottom:10px;
+      border: 1px solid #9da3a6;
+      background: #fff;
+      border-radius: 2px;
+    }
+    footer{
+      text-align: center;
+      font-size: 10px;
+      font-weight: lighter;
+      color: darkgrey;
+    }
+    footer p{
+      margin-top:0;
+    }
+  </style>
+
+  <div id="logo">
+    <a href="index.html"><img src="src/logo.png" width="235" id="mainLogo"></a>
+  </div>
+  <div class="container-fluid">
+    <form class="paypal-form" action="" method="post">
+      <div class="content">
+        아이디
+        <input name="id" type="text"  autocomplete="off" class="element">
+        비밀번호
+        <input name="pwd1" type="password"  autocomplete="off" class="element">
+        비밀번호 재확인
+        <input name="pwd2" type="password"  autocomplete="off" class="element">
+        주민등록 등본(초본)스캔본
+        <input  name="profile" type="file" autocomplete="off" placeholder="dd" id="profile">
+        <label for="profile" class="label_profile">사진 첨부하기</label>
+        <button class="buttonlogin actionbutton" type="submit">가입하기</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div>
+      <a>이용약관</a>
+      <a class="menuline">|</a>
+      <a>개인정보처리방침</a>
+      <a class="menuline">|</a>
+      <a>고객센터</a>
+    </div>
+    <p>Copyright AUCTIONLY. All Rights Reserved</p>
+  </footer>
+</body>
+</html>
