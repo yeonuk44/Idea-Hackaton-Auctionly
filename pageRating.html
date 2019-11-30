@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>평가하기</title>
+    <style>
+        body {
+            width: 300px;
+            height: 170px;
+            margin: 0;
+        }
+
+        h2 {
+            width: 100%;
+            padding: 10px 0 10px 0;
+            margin: 0 0 0 0;
+            color: white;
+            background-color: #34597C;
+            text-align: center;
+        }
+
+        input {
+            width: 240px;
+        }
+
+        #rangebox {
+            margin: 20px 0 10px 25px;
+        }
+
+        #submit_button {
+            font-weight: bold;
+            font-size: 13px;
+            background-color: #34597C;
+            color: white;
+            border-radius: 3px;
+            padding: 3px 6px 3px 6px;
+            margin-left: 130px;
+        }
+
+    </style>
+</head>
+<body>
+  <h2>평가하기</h2>
+  <div id="rangebox">
+      <span>-5</span><span style="margin-left: 103px;">0</span><span style="margin-left: 103px;">5</span>
+      <input type="range" name="points" min="-5"max="5" id="score" list=tickmarks>
+  </div>
+  <datalist id=tickmarks>
+      <option>-5</option>
+      <option>-4</option>
+      <option>-3</option>
+      <option>-2</option>
+      <option>-1</option>
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+  </datalist>
+  <button id="submit_button" class="rate-btn">제출</button>
+
+  <script src="js/script_rate.js"></script>
+  <script src="src/js/web3.min.js"></script>
+  <script src="src/js/truffle-contract.js"></script>
+  <script src="src/index.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+</body>
+</html>

@@ -50,7 +50,8 @@
             <th>조회</th>
           </tr>
         </thead>
-        <tbody >
+        <tbody id="question_list">
+          <!--
           <tr>
             <td class="q-num">2501</td>
             <td class="q-title"><a>낙찰가의 관련서류 열람은 언제부터?</a><span>[1]</span></td>
@@ -142,6 +143,7 @@
             <td class="q-date">19-11-21</td>
             <td class="q-view">137</td>
           </tr>
+          -->
 
         </tbody>
         <tfoot>
@@ -156,6 +158,64 @@
 
   <div id="footer-placeholder"></div>
 
+  <script>
+    let questions = [
+        { title: '낙찰가의 관련서류 열람은 언제부터?', count: 1, auth: 'aabde', date: '19-11-21', view: '137'},
+        { title: '안녕하세요 많은 가르침 부탁드립니다', count: 2, auth: 'bbb3434', date: '19-11-21', view: '69'},
+        { title: '10년이 지난 가처분..', count: 2, auth: 'ccc5656', date: '19-11-21', view: '143'},
+        { title: '꼭 읽어주시고 답변 부탁드립니다', count: 2, auth: 'abdcd', date: '19-11-21', view: '309'},
+        { title: '경매입찰서 작성방법 문의', count: 1, auth: 'dsf9sf', date: '19-11-21', view: '371'},
+        { title: '송달장소에 대한 문의입니다', count: 3, auth: 'ieown2', date: '19-11-21', view: '137'},
+        { title: '강제집행비용 예상?', count: 1, auth: 'peokw654', date: '19-11-21', view: '137'},
+        { title: '입찰 주의사항 질문 좀요', count: 2, auth: 'qpown', date: '19-11-21', view: '392'},
+        { title: '전세 만기후 1년 연장 가능여부', count: 4, auth: 'vdsws', date: '19-11-21', view: '102'},
+        { title: '낙찰자의 관련서류 열람은 언제부터?', count: 1, auth: 'odjmdf', date: '19-11-21', view: '802'},
+        { title: '안녕하세요 많은 가르침 부탁드립니다', count: 2, auth: 'asgewf', date: '19-11-21', view: '439'},
+        { title: '10년이 지난 가처분..', count: 2, auth: 'ccc5656', date: '19-11-21', view: '143'},
+        { title: '꼭 읽어주시고 답변 부탁드립니다', count: 2, auth: 'abdcd', date: '19-11-21', view: '309'},
+        { title: '경매입찰서 작성방법 문의', count: 1, auth: 'dsf9sf', date: '19-11-21', view: '371'},
+        { title: '송달장소에 대한 문의입니다', count: 3, auth: 'ieown2', date: '19-11-21', view: '137'},
+        { title: '강제집행비용 예상?', count: 1, auth: 'peokw654', date: '19-11-21', view: '137'},
+        { title: '입찰 주의사항 질문 좀요', count: 2, auth: 'qpown', date: '19-11-21', view: '392'},
+        { title: '전세 만기후 1년 연장 가능여부', count: 4, auth: 'vdsws', date: '19-11-21', view: '102'},
+        { title: '낙찰자의 관련서류 열람은 언제부터?', count: 1, auth: 'odjmdf', date: '19-11-21', view: '802'},
+        { title: '안녕하세요 많은 가르침 부탁드립니다', count: 2, auth: 'asgewf', date: '19-11-21', view: '439'},
+    ];
+
+    function createRegCell(row, className, element) {
+        let cel = row.insertCell();
+        cel.setAttribute('class', className);
+        let text = document.createTextNode(element);
+        cel.appendChild(text);
+    }
+
+    var nn = 2501;
+    function generateTable (table) {
+      for (let element of questions) {
+          let row = table.insertRow();
+          let n = row.insertCell();
+          n.setAttribute('class', 'q-num');
+          let text1 = document.createTextNode(nn);
+          nn--;
+          n.appendChild(text1);
+          let t = row.insertCell();
+          t.setAttribute('class', 'q-title');
+          let text2 = document.createTextNode(element['title']);
+          t.appendChild(text2);
+          let s = document.createElement('SPAN');
+          let c = document.createTextNode('['+ element['count'] + ']')
+          t.appendChild(s);
+          t.appendChild(c);
+          createRegCell(row, 'q-auth', element['auth']);
+          createRegCell(row, 'q-date', element['date']);
+          createRegCell(row, 'q-view', element['view']);
+      }
+    }
+
+    let list = document.getElementById('question_list');
+    generateTable(list);
+
+  </script>
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

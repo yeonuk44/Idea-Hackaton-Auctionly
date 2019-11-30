@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>입찰하기</title>
+    <style>
+      body {
+        width: 300px;
+        height: 180px;
+        margin: 0;
+      }
+
+      h2 {
+        width: 100%;
+        padding: 10px 0 10px 0;
+        margin: 0;
+        color: white;
+        background-color: #34597C;
+        text-align: center;
+      }
+
+      input {
+        border-radius: 3px;
+        margin: 16px 10px 16px 10px;
+        width: 210px;
+        height: 24px;
+        font-size: 18px;
+      }
+
+      #pricebox {
+        margin: 16px 0 5px 25px;
+      }
+
+      #bid_button {
+        font-weight: bold;
+        font-size: 13px;
+        background-color: #34597C;
+        color: white;
+        border-radius: 3px;
+        padding: 3px 6px 3px 6px;
+        margin-left: 130px;
+      }
+
+    </style>
+  </head>
+  <body>
+  <h2>입찰하기</h2>
+  <div id="pricebox">
+    <input id="bid-charge"><span>원</span>
+  </div>
+  <button id="bid_button">입찰</button>
+  <script src="js/script_rate.js"></script>
+  <script src="src/js/web3.min.js"></script>
+  <script src="src/js/truffle-contract.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="src/index.js"></script>
+</body>
+</html>

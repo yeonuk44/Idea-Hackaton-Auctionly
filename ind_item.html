@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/pop_up_style.css">
+</head>
+<body>
+  <div id="user_info" onclick="closeRating()"></div>
+  <div id="info_box">
+    <div style="width: 100%; height: 70%; display: flex;">
+      <img src="src/profile-pic.png" width="30%" style="margin: 25px;">
+      <div>
+        <h1 rate-id = "0">zxxv12</h1>
+        <button id="rate_button" onclick="activateRate()">평가하기</button>
+        <button type="button" name="button" class="getRate-btn">점수확인</button>
+        <h3>주소:<br><span class="account-address" account-id = 0 >0xe11B87cf12409b22319503dB03d3891BB6Fd56b7</span></h3>
+      </div>
+    </div>
+    <div id="rating">
+      <p>점수: <span id="which_rating" >-</span></p>
+    </div>
+    <div id="grade">
+      <p>등급: <span id="which_grade">-</span></p>
+    </div>
+  </div>
+
+  <div id="seminav">
+    <a href="index.html"><img src="src/logo.png" width="235" style="float: left;"></a>
+    <a onclick="hi()"><img src="src/datgi.png" height="36"></a>
+    <a><img src="src/insueh.png" height="36"></a>
+    <a onclick="activateBid()"><img src="src/ipchal.png" height="36"></a>
+    <a><img src="src/dungrok.png" height="36"></a>
+  </div>
+  <div id = "bid_prev" class="chunkdiv" style="margin-bottom: 10px">
+    <span>사건번호: </span>
+    <span id ="object-id">2019 타경 22941</span>
+    <span id = "bidder-name" style="float: right;">김연욱</span>
+    <span style="float: right; font-weight: bold;">사용자:&nbsp;</span>
+  </div>
+  <table>
+    <tbody id="detail">
+      <tr class="detail_row">
+        <th class="detail_type">소재지</th>
+        <td colspan="4">경상북도 울진군 북면 부구리 산00-0</td>
+      </tr>
+      <tr>
+        <th class="detail_type">물건종별</th>
+        <td class="detail_det">임야</td>
+        <th class="detail_type">감정가</th>
+        <td class="detail_det2">35,467,000 원</td>
+        <td style="font-weight: normal; background-color: #eeeeee; text-align: center;">입찰현황<img id="get-bidder" data-id=0 src="src/refresh.png" width="9" style="opacity: 50%; margin-top: 4px; margin-left: 3px;" ></td>
+      </tr>
+      <tr>
+        <th class="detail_type">토지면적</th>
+        <td class="detail_det">10728.768평</td>
+        <th class="detail_type">최저가</th>
+        <td class="detail_det2">(70%) 24,827,000 원</td>
+        <td class="detail_blank"><span id="bidders" bid-id=0></span></td>
+      </tr>
+      <tr>
+        <th class="detail_type">건물면적</th>
+        <td class="detail_det">-</td>
+        <th class="detail_type">보증금</th>
+        <td class="detail_det2">(10%) 2,490,000 원</td>
+        <td class="detail_blank"></td>
+      </tr>
+      <tr>
+        <th class="detail_type">매각물건</th>
+        <td class="detail_det">토지매각 (제시와 기타포함)</td>
+        <th class="detail_type">소유자</th>
+        <td class="detail_det2">농업회사법인 (주)XX원</td>
+        <td class="detail_blank"></td>
+      </tr>
+      <tr>
+        <th class="detail_type">개시결정</th>
+        <td class="detail_det">2017-08-17</td>
+        <th class="detail_type">채무자</th>
+        <td class="detail_det2">농업회사법인 (주)XX원</td>
+        <td class="detail_blank"></td>
+      </tr>
+      <tr>
+        <th class="detail_type">사건명</th>
+        <td class="detail_det">임의경매</td>
+        <th class="detail_type">채권자</th>
+        <td class="detail_det2">홍길동</td>
+        <td class="detail_blank"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="width: 800px; height: 160px; margin-top: 10px">
+    <img src="src/pics/1.jpg" width="260" height="170">
+    <img src="src/pics/6.jpg" width="260" height="170" style="margin-left: 5px">
+    <img src="src/pics/7.jpg" width="260" height="170" style="margin-left: 5px">
+  </div>
+  <div class="chunkdiv" style="display: flex; flex-wrap: wrap;">
+    <div class="file_buttons">토지등기</div>
+    <div class="file_buttons">감정평가서</div>
+    <div class="file_buttons">현황조사서</div>
+    <div class="file_buttons">매각물건명세서</div>
+    <div class="file_buttons">부동산표시목록</div>
+    <div class="file_buttons">기일내역</div>
+    <div class="file_buttons">문건/송달내역</div>
+    <div class="file_buttons">사건내역</div>
+    <div class="file_buttons">전자지도</div>
+    <div class="file_buttons">전자지적도</div>
+
+  </div>
+  <div class="chunkdiv">
+    <p>매각토지/건물현황</p>
+    <table>
+      <tbody id="status">
+        <tr>
+          <th>목록</th>
+          <th>지번</th>
+          <th colspan="2">용도 / 구조 / 면적 / 토지이용계획</th>
+          <th>m당 단가</th>
+          <th>감정가</th>
+          <th>비고</th>
+        </tr>
+        <tr>
+          <th class="mokrok">토지</th>
+          <td class="jibun">부구리 산00-0</td>
+          <td class="yongdo1">계획관리지역, 농림지역</td>
+          <td class="yongdo2">임야 35.467m</td>
+          <td class="danga">1,000원</td>
+          <td class="gamjungga">35,467,000 원</td>
+          <td class="bigo">*입목포함, 분묘감안</td>
+        </tr>
+        <tr>
+          <th>감정가</th>
+          <td colspan="3">토지: 35,467m (10728.768평)</td>
+          <td>합계</td>
+          <td>35,467,000 원</td>
+          <td>토지매각<br>(제시외기타 포함)</td>
+        </tr>
+        <tr style="height: 60px">
+          <th>위치<br>현황</th>
+          <td colspan="6">
+            - XX중학교 남서측 원거리에 위치하며, 부근 일대는 전, 답, 자연림, 농가주택 등으로 형성되어 있음<br>
+            - 본건 인근까지 차량접근 가능하며, 제반 교통사정은 보통시됨<br>
+            - 북동하향의 완경사지대의 부정형 토지로서 "자연림"으로 이용중임.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="chunkdiv">
+    <p>댓글</p>
+    <input placeholder="댓글 작성하기" id="comment_input">
+    <div id="comment">
+      <p onclick="viewRating()" id="user_id">zxxv12</p><br>
+      <p>2019-11-18 15:10 . 신고</p><br>
+      <p>괜찮은데요.</p><br>
+      <br>
+      <p><span style="float: left;">답글 11</span><span>싫어요 0</span><span>좋아요 4</span></p>
+    </div>
+    <hr>
+
+  </div>
+
+  <script>
+    let userInfo = document.getElementById('user_info');
+    let infoBox = document.getElementById('info_box');
+
+    function viewRating () {
+        userInfo.style.display = 'block';
+        infoBox.style.display = 'flex';
+    }
+
+    function closeRating () {
+        userInfo.style.display = 'none';
+        infoBox.style.display = 'none';
+    }
+
+    function hi() {
+      close();
+    }
+
+  </script>
+  <script src="js/script_rate.js"></script>
+  <script src="src/js/web3.min.js"></script>
+  <script src="src/js/truffle-contract.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="src/index.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+</body>
+</html>

@@ -1,21 +1,31 @@
 {
-  "name": "package.json",
+  "name": "Auctionly",
   "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "TestEtherep"
   },
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config prod.config.js"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "http": "0.0.0",
-    "mongoose": "^5.7.12",
-    "path": "^0.12.7",
-    "serve-static": "^1.14.1"
+    "lite-server": "^2.5.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "zeppelin-solidity": "1.12.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "terser": "^4.4.0"
   },
-  "description": ""
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "webpack-dev-server": "^3.9.0"
+  }
 }
