@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel= "stylesheet" href =  "css/pop_up_style.css">
+    <style>
+      #user_info {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 50%;
+        display: block;
+      }
+
+      #info_box {
+        width: 492px;
+        height: 277.29px;
+        top: 35%;
+        left: 20%;
+        position: fixed;
+        background-color: white;
+        opacity: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 5px;
+      }
+
+      #info_box h1 {
+        margin: 47px 0 0px 20px;
+        font-size: 30px;
+        /*color: #34597C;*/
+      }
+
+      #info_box h3 {
+        margin-top: 10px;
+        margin-left: 22px;
+        font-size: 14px;
+      }
+
+      #info_box h3 span {
+        font-size: 11px;
+        font-weight: normal;
+        color: #34597C;
+      }
+
+      #rate_button {
+        background: #34597C;
+        color: white;
+        margin-left: 20px;
+        border-radius: 3px;
+      }
+
+      #rating, #grade {
+        width: 49.8%;
+        height: 30%;
+        border-top: lightgray solid 1px;
+        text-align: center;
+      }
+
+      #rating {
+        border-right: lightgray solid 1px;
+      }
+
+      #info_box p {
+        font-size: 32px;
+        font-weight: bold;
+        color: #34597C;
+        margin: 23px 23px;
+      }
+
+      #which_rating, #which_grade {
+        color: white;
+        background: #34597C;
+        padding: 4px 9px 4px 9px;
+        border-radius: 5px;
+      }
+      #user_id {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="user_info" onclick="closeRating()"></div>
+    <div id="info_box">
+      <div style="width: 100%; height: 70%; display: flex;">
+        <img src="src/profile-pic.png" width="30%" style="margin: 25px;">
+        <div>
+          <h1>User ID :  abcd</h1>
+          <h3>주소:<br><span>0x32D57e7ffEb6F17f85F5D9EA8EC657459B7D084F</span></h3>
+        </div>
+      </div>
+      <div id="rating">
+        <p>점수: <span id="which_rating">150.0</span></p>
+      </div>
+      <div id="grade">
+        <p>등급: <span id="which_grade">평민</span></p>
+      </div>
+    </div>
+  </body>
+</html>
