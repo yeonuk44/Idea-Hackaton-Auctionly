@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mypage_login</title>
+  <style>
+    .mybuttons {
+      border: lightgray solid 1px;
+      text-align: center;
+      font-size: 12px;
+      width: 55px;
+      height: 20px;
+      background-color: #d8d8d8;
+      padding-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div style="width: 220px; height: 60px; border: lightgray solid 1px; display: flex;">
+    <img src="src/profile-pic.png" height="52" style="margin: 4px">
+    <div style="width: 160px; height: 60px; margin: 9px 0 0 6px;">
+      <!-- rating page 만들어 지면 a 태그에 삽압하기 -->
+      <p  style="margin: 0; font-size: 13px;" >
+        <a href="/rating_page.html" id = "id" > abcd</a>
+        <a href="/rating_page.html" style="font-size: 8px; text-decoration: underline; margin-left: 6px;">내정보</a>
+      </p>
+      <a style="font-size: 8px;">알림 0</a>
+      <a style="font-size: 8px; margin-left: 15px;">쪽지 0</a>
+      <a href="/process/logout" style="font-size: 8px; padding: 2px; border: lightgray solid 1px; margin-left: 8px;">로그아웃</a>
+    </div>
+  </div>
+  <div style="width: 220px; height: 24px; margin-bottom: 30px; display: flex;">
+    <div class="mybuttons">내가쓴글</div>
+    <div class="mybuttons">MY경매</div>
+    <div class="mybuttons">관심매물</div>
+    <div class="mybuttons">최근열람</div>
+  </div>
+</body>
+</html>
