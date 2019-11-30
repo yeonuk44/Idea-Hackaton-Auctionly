@@ -64,6 +64,8 @@ var router = express.Router();
 
 
 //http://localhost:3000/process/product 이 주소로 치면 라우터를 통해 바로 여기로 올 수 있다
+
+//커뮤니티 라우터
 router.route('/process/community').get(
     function (req, res)
     {
@@ -82,7 +84,31 @@ router.route('/process/community').get(
     }
 );
 
-router.route('/process/login').post(                      //설정된 쿠키정보를 본다
+// login 된 홈
+router.route('/process/login_home').get(
+  function (req,res)
+  {
+    console.log('/process/login_home 라우팅 함수 실행');
+
+    //세션 정보는 req.session 에 들어 있다.
+    if(req.session.user) //세션에 유저가 있다면
+    {
+        res.redirect('/index_login.html');
+    }
+    else
+    {
+      res.redirect('/index.html');
+    }
+  }
+);
+// //마이 페이지 라우터
+// router.route('/process/mypage').get(
+//
+//   )
+// )
+
+//로그인 라우터
+router.route('/process/login').get(                      //설정된 쿠키정보를 본다
     function (req, res) {
         console.log('/process/login 라우팅 함수호출 됨');
 
@@ -96,7 +122,7 @@ router.route('/process/login').post(                      //설정된 쿠키정�
             res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
             res.write('<h1>already Login</h1>');
             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
-            res.write('<a href="/process/community">Move</a>');
+            res.write('<a href="/process/login_home" >Move</a>');
             res.write('<a href="/process/logout">\tlogout</a>');
 
             res.end();
@@ -112,14 +138,58 @@ router.route('/process/login').post(                      //설정된 쿠키정�
             // res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
             res.write('<h1>Login Success</h1>');
             res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
-            res.write('<a href="/process/community">Move</a>');
-            res.write('<a href="/process/Logout">\tlogout</a>');
+            res.write('<a href="/process/login_home">\t Move</a>');
+
+            res.write('<a href="/process/Logout">\t logout</a>');
 
             res.end();
         }
     }
 );
 
+// 회원가입 라우터
+router.route('/process/create_account').post(                      //설정된 쿠키정보를 본다
+    function (req, res) {
+        console.log('/process/create_account 라우팅 함수호출 됨');
+
+        var paramID = req.body.id || req.query.id;
+        var pw = req.body.pw || req.query.pw;
+
+
+        if (req.session.user) {
+            console.log('이미 회원가입 되어 있음');
+
+            res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
+            res.write('<h1>already SignUp</h1>');
+            res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
+            res.write('<h2>Move to homepage</h2>');
+            res.write('<a href="/process/login_home">\t Move</a>');
+            // res.write('<h2>Try to login </h2>');
+            // res.write('<a href="/process/login">\t login</a>');
+
+            res.end();
+
+        } else {
+            req.session.user =
+                {
+                    id: paramID,
+                    pw: pw,
+                    name: 'UsersNames!!!!!',
+                    authorized: true
+                };
+            //res.writeHead(200, { "Content-Type": "text/html;characterset=utf8" });
+            res.write('<h1>SignUp Success</h1>');
+            res.write('[ID] : ' + paramID + ' [PW] : ' + pw);
+            res.write('<h2>Move to homepage </h2>');
+            res.write('<a href="/process/login_home">\t Move</a>');
+
+            res.end();
+        }
+    }
+);
+
+
+// 로그아웃 라우터
 router.route('/process/logout').get(                      //설정된 쿠키정보를 본다
     function (req, res) {
         console.log('/process/loginout 라우팅 함수호출 됨');
