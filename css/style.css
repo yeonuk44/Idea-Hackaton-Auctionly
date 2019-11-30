@@ -104,6 +104,63 @@ a {
   margin-bottom: 30px;
 }
 
+  /****** Logged in ******/
+#basic_info {
+  width: 220px;
+  height: 60px;
+  border: lightgray solid 1px;
+  display: flex;
+}
+
+#basic_info a {
+  font-size: 8px;
+}
+
+#basic_info img {
+  margin: 4px;
+}
+
+#basic_info p {
+  margin: 0;
+  font-size: 13px;
+}
+
+#basic_info span {
+  font-size: 8px;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+#basic_info div {
+  width: 160px;
+  height: 60px;
+  margin: 9px 0 0 6px;
+}
+
+#logout_button {
+  padding: 2px;
+  border: lightgray solid 1px;
+  margin-left: 8px;
+}
+
+#basic_button {
+  width: 220px;
+  height: 24px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.mybuttons {
+  border: lightgray solid 1px;
+  text-align: center;
+  font-size: 12px;
+  width: 55px;
+  height: 20px;
+  background-color: #d8d8d8;
+  padding-top: 4px;
+}
+  /****** ******/
+
 .imgonly {
   margin-bottom: 30px;
 }
@@ -159,6 +216,12 @@ li>span {
   margin-bottom: 16px;
 }
   /****** ******/
+  /****** HOT Results ******/
+#resultmenu {
+  width: 220px;
+  height: 180px;
+  border: solid gainsboro 1px;
+}
 
 /****** center ******/
 #centerdiv {
@@ -190,6 +253,11 @@ li>span {
 .oneproduct {
   width: 150px;
   margin: 0 7px 14px 7px;
+}
+
+.oneproduct_hot {
+  width: 150px;
+  margin: 0 7px 50px 7px;
 }
 
 .productname {
