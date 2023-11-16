@@ -62,12 +62,19 @@ just **git clone** and import project
 즉, 해당 블록체인 기반의 서비스를 이용한다면 개인의 신원을 안전하게 공증받을 수 있고, 복잡한 절차를 보기 쉽게 정렬한 UI/UX를 통해 경매 참여의 접근성을 높일 수 있다. 또한, 경매품의 감정 결과와 경매 결과에 대해 자유롭게 이야기를 나눌 수 있는 커뮤니티를 도입해 사용자들이 자발적으로 양질의 정보를 제공하도록 돕니다. 이를 통해 일반인 입찰자들이 균형 있는 정보를 접할 수 있게 되어 감정평가사와 중개인에 대한 의존도가 낮아질 것을 기대한다. 마지막으로 일반인 경매 참여의 진입 장벽을 높이는 요인인 현장 경매 제도를 개선하기 위해 단기적으로 기간입찰 대리 서비스, 장기적으로 현장 경매 대리 서비스를 도입해 법원 경매 프로세스를 간소화한다.
 
 ### 2. 아이디어 개요 및 상세 설명
+![idea-outline-1](src/idea-outline-1.png)
+![idea-outline-2](src/idea-outline-2.png)
+![idea-outline-3](src/idea-outline-3.png)
 
 
 ### 3. 고객 및 시장 분석
+![target-1](src/target-1.png)
+![target-2](src/target-2.png)
 
 
 ### 4. 실생활 활용성
+![real-world-usability-research](src/real-world-usability-research.png)
 
 
 ### 5. 실제 이용 시나리오
+![service-usage-scenarios](src/service-usage-scenarios.png)
