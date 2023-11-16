@@ -1,4 +1,4 @@
-# BlockChain based Court Auction Bidding Process Service DApp ; Chung-Ang University(CAU) Idea Hackaton
+# BlockChain based Court Auction Bidding Process Service DApp ;Chung-Ang University(CAU) Idea Hackaton
 :Prepare Hackathon:
 
 ## Summary
