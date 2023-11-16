@@ -5,9 +5,6 @@
 
 ![service-info-image](src/service-info-image.png)
 
-## LOGO
-
-![logo](src/logo.png)
 
 ##  How to use
 
